@@ -31,19 +31,19 @@ public class ModItems {
     }
 
     /**
-     * 이미 존재하는 아이템 그룹에 새로운 아이템들을 추가하기
-     */
-    private static void customIngredients(FabricItemGroupEntries entries) {
-        entries.add(FLUORITE);
-        entries.add(RAW_FLUORITE);
-    }
-
-    /**
      * static 아이템을 등록하기 때문에 static method로 선언
      */
     public static void registerModItems() {
         MCCourseMod.LOGGER.info("Registering Mod Items for " + MCCourseMod.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::customIngredients);
+    }
+
+    /**
+     * 이미 존재하는 아이템 그룹에 새로운 아이템들을 추가하기
+     */
+    private static void customIngredients(FabricItemGroupEntries entries) {
+        entries.add(FLUORITE);
+        entries.add(RAW_FLUORITE);
     }
 }
