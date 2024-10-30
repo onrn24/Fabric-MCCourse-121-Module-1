@@ -2,5 +2,10 @@
   "item.mccourse.fluorite": "Fluorite",
   "item.mccourse.raw_fluorite": "Raw Fluorite",
 
-  "itemgroup.fluorite":"Fluorite Group"
+  "block.mccourse.fluorite_block": "Fluorite Block",
+  "block.mccourse.fluorite_ore": "Fluorite Ore",
+  "block.mccourse.fluorite_deepslate": "Fluorite Deepslate ore",
+
+  "itemgroup.fluorite":"Fluorite Items",
+  "itemgroup.fluorite_blocks":"Fluorite Blocks"
 }
