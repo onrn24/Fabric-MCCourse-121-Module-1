@@ -23,10 +23,12 @@ public class ModItems {
     //   >> 이를 models/item/~.json이 담당함
     public static final Item FLUORITE = registerItem("fluorite", new Item(new Settings()));
     public static final Item RAW_FLUORITE = registerItem("raw_fluorite", new Item(new Settings()));
-
     // maxDamage() >> 내구도 32
     public static final Item CHAINSAW = registerItem("chainsaw",
             new ChainsawItem(new Settings().maxDamage(32)));
+    //
+    public static final Item STRAWBERRY = registerItem("strawberry",
+            new Item(new Settings().food(ModFoodComponents.STRAWBERRY)));
 
     /**
      * Registry에 새로운 아이템을 등록하기 위한 메서드
