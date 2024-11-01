@@ -9,6 +9,8 @@
   "block.mccourse.fluorite_end_ore": "Fluorite End Ore",
   "block.mccourse.fluorite_nether_ore": "Fluorite Nether Ore",
 
+  "block.mccourse.magic_block": "Magic Block",
+
   "itemgroup.fluorite":"Fluorite Items",
   "itemgroup.fluorite_blocks":"Fluorite Blocks"
 }

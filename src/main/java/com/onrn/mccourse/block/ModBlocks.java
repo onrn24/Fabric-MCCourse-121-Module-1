@@ -1,6 +1,7 @@
 package com.onrn.mccourse.block;
 
 import com.onrn.mccourse.MCCourseMod;
+import com.onrn.mccourse.block.custom.MagicBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -35,6 +36,9 @@ public class ModBlocks {
     public static final Block FLUORITE_NETHER_ORE = registerBlock("fluorite_nether_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     AbstractBlock.Settings.create().strength(6f).requiresTool()));
+    //
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool()));
 
     /**
      * Registries.ITEM으로 먼저 등록한 뒤에
