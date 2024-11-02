@@ -1,6 +1,6 @@
 package com.onrn.mccourse.block.custom;
 
-import com.onrn.mccourse.item.ModItems;
+import com.onrn.mccourse.util.ModTags;
 import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -64,9 +64,14 @@ public class MagicBlock extends Block {
     }
 
     private boolean isValidItem(ItemStack stack) {
-        return stack.getItem() == ModItems.FLUORITE
-                || stack.getItem() == ModItems.RAW_FLUORITE
-                || stack.getItem() == Items.COAL;
+        /**
+         * return stack.getItem() == ModItems.FLUORITE
+         *                 || stack.getItem() == ModItems.RAW_FLUORITE
+         *                 || stack.getItem() == Items.COAL;
+         *
+         * 하드코딩을 Tag로 대체
+         */
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     /**
