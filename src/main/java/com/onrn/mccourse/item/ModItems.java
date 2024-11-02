@@ -29,6 +29,10 @@ public class ModItems {
     //
     public static final Item STRAWBERRY = registerItem("strawberry",
             new Item(new Settings().food(ModFoodComponents.STRAWBERRY)));
+    /**
+     * 새로운 연료용 아이템 : starlight_ashes
+     */
+    public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Settings()));
 
     /**
      * Registry에 새로운 아이템을 등록하기 위한 메서드
