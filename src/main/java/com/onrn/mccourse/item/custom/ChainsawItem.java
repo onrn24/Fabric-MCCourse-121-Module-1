@@ -1,12 +1,17 @@
 package com.onrn.mccourse.item.custom;
 
+import java.util.List;
 import java.util.Objects;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 
@@ -58,5 +63,25 @@ public class ChainsawItem extends Item {
         // 이때 무엇을 사용하고 싶은지, 무엇을 하고 싶은지 알기 위해서
         // ActionResult가 필요하다.
         return ActionResult.CONSUME;
+    }
+
+    /**
+     * 아이템에 설명(tooltip) 추가
+     */
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip,
+            TooltipType type) {
+        /**
+         * 키 Shift 누르는 지 검사
+         */
+        if(!Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("tooltip.mccourse.chainsaw.tooltip.shift"));
+        } else {
+            // '\n' 대신 tooltip.add()를 나눠서 줄 바꿈을 한다.
+            tooltip.add(Text.translatable("tooltip.mccourse.chainsaw.tooltip.1"));
+            tooltip.add(Text.translatable("tooltip.mccourse.chainsaw.tooltip.2"));
+        }
+
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

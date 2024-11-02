@@ -2,13 +2,17 @@ package com.onrn.mccourse.item;
 
 import com.onrn.mccourse.MCCourseMod;
 import com.onrn.mccourse.item.custom.ChainsawItem;
+import java.util.List;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Settings;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 /**
@@ -26,9 +30,21 @@ public class ModItems {
     // maxDamage() >> 내구도 32
     public static final Item CHAINSAW = registerItem("chainsaw",
             new ChainsawItem(new Settings().maxDamage(32)));
-    //
+    /**
+     * Item 클래스를 상속하지 않아서 appendTooltip 메서드가 없을 경우
+     * - anonymous class 적용한다
+     * - new Item() 뒤 { } 안에 override appendTooltip() 작성
+     * - Block도 동일함
+     */
     public static final Item STRAWBERRY = registerItem("strawberry",
-            new Item(new Settings().food(ModFoodComponents.STRAWBERRY)));
+            new Item(new Settings().food(ModFoodComponents.STRAWBERRY)) {
+                @Override
+                public void appendTooltip(ItemStack stack, TooltipContext context,
+                        List<Text> tooltip, TooltipType type) {
+                    tooltip.add(Text.translatable("tooltip.mccourse.strawberry.tooltip.1"));
+                    super.appendTooltip(stack, context, tooltip, type);
+                }
+            });
     /**
      * 새로운 연료용 아이템 : starlight_ashes
      */
