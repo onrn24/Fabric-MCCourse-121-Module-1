@@ -18,6 +18,10 @@
   "block.mccourse.fluorite_button": "Fluorite Button",
   "block.mccourse.fluorite_pressure_plate": "Fluorite Pressure Plate",
 
+  "block.mccourse.fluorite_fence": "Fluorite Fence",
+  "block.mccourse.fluorite_fence_gate": "Fluorite Fence Gate",
+  "block.mccourse.fluorite_wall": "Fluorite Wall",
+
   "itemgroup.fluorite":"Fluorite Items",
   "itemgroup.fluorite_blocks":"Fluorite Blocks",
 

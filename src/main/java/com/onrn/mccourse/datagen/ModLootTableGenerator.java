@@ -49,6 +49,13 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.FLUORITE_STAIRS);
         addDrop(ModBlocks.FLUORITE_SLAB, slabDrops(ModBlocks.FLUORITE_SLAB));
+
+        addDrop(ModBlocks.FLUORITE_BUTTON);
+        addDrop(ModBlocks.FLUORITE_PRESSURE_PLATE);
+
+        addDrop(ModBlocks.FLUORITE_WALL);
+        addDrop(ModBlocks.FLUORITE_FENCE);
+        addDrop(ModBlocks.FLUORITE_FENCE_GATE);
     }
 
     /**

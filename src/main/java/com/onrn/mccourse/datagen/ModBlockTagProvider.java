@@ -33,5 +33,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // resource/data/minecraft/tags/block/needs_iron_tool.json
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+
+        // 매우 중요함
+        // - tag에 추가하지 않으면 다른 fence, gate, wall와 연결할 수 없음
+        // - FENCES 태그는 nether fence와 연결됨.
+        // - 나무에 대해서는 WOODEN_FENCES
+        getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.FLUORITE_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.FLUORITE_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.WALLS).add(ModBlocks.FLUORITE_WALL);
     }
 }

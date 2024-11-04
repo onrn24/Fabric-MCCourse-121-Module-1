@@ -7,9 +7,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockSetType;
 import net.minecraft.block.ButtonBlock;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.block.WallBlock;
+import net.minecraft.block.WoodType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item.Settings;
 import net.minecraft.registry.Registries;
@@ -60,6 +64,13 @@ public class ModBlocks {
             new ButtonBlock(BlockSetType.IRON, 10, AbstractBlock.Settings.create().requiresTool()));
     public static final Block FLUORITE_PRESSURE_PLATE = registerBlock("fluorite_pressure_plate",
             new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool()));
+    //
+    public static final Block FLUORITE_FENCE = registerBlock("fluorite_fence",
+            new FenceBlock(AbstractBlock.Settings.create().requiresTool()));
+    public static final Block FLUORITE_FENCE_GATE = registerBlock("fluorite_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().requiresTool()));
+    public static final Block FLUORITE_WALL = registerBlock("fluorite_wall",
+            new WallBlock(AbstractBlock.Settings.create().requiresTool()));
 
     /**
      * Registries.ITEM으로 먼저 등록한 뒤에
