@@ -5,6 +5,8 @@ import com.onrn.mccourse.block.custom.MagicBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item.Settings;
 import net.minecraft.registry.Registries;
@@ -39,6 +41,12 @@ public class ModBlocks {
     //
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool()));
+    //
+    public static final Block FLUORITE_STAIRS = registerBlock("fluorite_stairs",
+            new StairsBlock(ModBlocks.FLUORITE_BLOCK.getDefaultState(),
+                    AbstractBlock.Settings.create().strength(2f).requiresTool()));
+    public static final Block FLUORITE_SLAB = registerBlock("fluorite_slabs",
+            new SlabBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
 
     /**
      * Registries.ITEM으로 먼저 등록한 뒤에

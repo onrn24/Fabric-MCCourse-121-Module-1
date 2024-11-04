@@ -34,7 +34,9 @@ public class ModModelProvider extends FabricModelProvider {
          *   }
          * }
          */
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_BLOCK);
+        // 기본 블록 외에 계단, 반블록 등을 등록할 수 있도록 선언
+        BlockStateModelGenerator.BlockTexturePool fluoriteTexturePool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLUORITE_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_DEEPSLATE_ORE);
@@ -42,6 +44,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_NETHER_ORE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
+
+        // 위에서 선언한 pool을 가지고 파생되는 여러 블록 생성
+        fluoriteTexturePool.stairs(ModBlocks.FLUORITE_STAIRS);
+        fluoriteTexturePool.slab(ModBlocks.FLUORITE_SLAB);
     }
 
     @Override
