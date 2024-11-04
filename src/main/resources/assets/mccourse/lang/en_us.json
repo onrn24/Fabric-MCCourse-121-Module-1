@@ -15,6 +15,8 @@
 
   "block.mccourse.fluorite_stairs": "Fluorite Stairs",
   "block.mccourse.fluorite_slab": "Fluorite Slab",
+  "block.mccourse.fluorite_button": "Fluorite Button",
+  "block.mccourse.fluorite_pressure_plate": "Fluorite Pressure Plate",
 
   "itemgroup.fluorite":"Fluorite Items",
   "itemgroup.fluorite_blocks":"Fluorite Blocks",

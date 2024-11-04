@@ -48,6 +48,8 @@ public class ModModelProvider extends FabricModelProvider {
         // 위에서 선언한 pool을 가지고 파생되는 여러 블록 생성
         fluoriteTexturePool.stairs(ModBlocks.FLUORITE_STAIRS);
         fluoriteTexturePool.slab(ModBlocks.FLUORITE_SLAB);
+        fluoriteTexturePool.button(ModBlocks.FLUORITE_BUTTON);
+        fluoriteTexturePool.pressurePlate(ModBlocks.FLUORITE_PRESSURE_PLATE);
     }
 
     @Override

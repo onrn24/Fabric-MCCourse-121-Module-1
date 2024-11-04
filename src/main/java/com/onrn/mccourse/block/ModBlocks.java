@@ -4,7 +4,10 @@ import com.onrn.mccourse.MCCourseMod;
 import com.onrn.mccourse.block.custom.MagicBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSetType;
+import net.minecraft.block.ButtonBlock;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.item.BlockItem;
@@ -47,6 +50,16 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().strength(2f).requiresTool()));
     public static final Block FLUORITE_SLAB = registerBlock("fluorite_slabs",
             new SlabBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
+    // pressTicks : 버튼이 활성 상태(누른 상태)로 유지되는 시간(틱 단위)을 나타냅니다.
+    //   이 값은 Minecraft에서 게임 틱을 기준으로 측정되며,
+    //   버튼을 누른 후 버튼이 다시 비활성화되기까지 걸리는 시간을 정의합니다.
+    // 예를 들어, pressTicks 값이 20이면 버튼을 누른 후 약 1초 동안 활성 상태로 유지됩니다(1초 = 20틱).
+    // 이 설정을 통해 버튼을 누른 후에 얼마나 오랫동안 신호가 유지될지를 조정할 수 있으며,
+    // 이는 레드스톤 회로나 다른 상호작용 요소에 중요한 역할을 합니다.
+    public static final Block FLUORITE_BUTTON = registerBlock("fluorite_button",
+            new ButtonBlock(BlockSetType.IRON, 10, AbstractBlock.Settings.create().requiresTool()));
+    public static final Block FLUORITE_PRESSURE_PLATE = registerBlock("fluorite_pressure_plate",
+            new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool()));
 
     /**
      * Registries.ITEM으로 먼저 등록한 뒤에
