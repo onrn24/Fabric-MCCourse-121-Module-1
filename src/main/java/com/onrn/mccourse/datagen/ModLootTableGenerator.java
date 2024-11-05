@@ -56,6 +56,9 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FLUORITE_WALL);
         addDrop(ModBlocks.FLUORITE_FENCE);
         addDrop(ModBlocks.FLUORITE_FENCE_GATE);
+        // 문은 셀 두 칸을 차지하고 있어서 별도의 doorDrops 사용
+        addDrop(ModBlocks.FLUORITE_DOOR, doorDrops(ModBlocks.FLUORITE_DOOR));
+        addDrop(ModBlocks.FLUORITE_TRAPDOOR);
     }
 
     /**

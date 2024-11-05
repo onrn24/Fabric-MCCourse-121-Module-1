@@ -22,6 +22,9 @@
   "block.mccourse.fluorite_fence_gate": "Fluorite Fence Gate",
   "block.mccourse.fluorite_wall": "Fluorite Wall",
 
+  "block.mccourse.fluorite_door": "Fluorite Door",
+  "block.mccourse.fluorite_trapdoor": "Fluorite Trapdoor",
+
   "itemgroup.fluorite":"Fluorite Items",
   "itemgroup.fluorite_blocks":"Fluorite Blocks",
 

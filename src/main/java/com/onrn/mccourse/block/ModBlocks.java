@@ -6,12 +6,14 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSetType;
 import net.minecraft.block.ButtonBlock;
+import net.minecraft.block.DoorBlock;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.block.WallBlock;
 import net.minecraft.block.WoodType;
 import net.minecraft.item.BlockItem;
@@ -71,6 +73,12 @@ public class ModBlocks {
             new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().requiresTool()));
     public static final Block FLUORITE_WALL = registerBlock("fluorite_wall",
             new WallBlock(AbstractBlock.Settings.create().requiresTool()));
+    // - BlockSetType.IRON으로 설정해서 우클릭으로 열 수 없다.
+    // 버튼, 레버, 압력판, 레드스톤 회로로 열 수 있다.
+    public static final Block FLUORITE_DOOR = registerBlock("fluorite_door",
+            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
+    public static final Block FLUORITE_TRAPDOOR = registerBlock("fluorite_trapdoor",
+            new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
 
     /**
      * Registries.ITEM으로 먼저 등록한 뒤에

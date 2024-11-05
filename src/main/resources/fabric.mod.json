@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"com.onrn.mccourse.MCCourseModDataGenerator"
+		],
+		"client": [
+			"com.onrn.mccourse.MCCourseModClient"
 		]
 	},
 	"mixins": [
