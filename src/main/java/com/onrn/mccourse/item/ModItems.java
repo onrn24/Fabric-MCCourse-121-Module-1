@@ -2,6 +2,7 @@ package com.onrn.mccourse.item;
 
 import com.onrn.mccourse.MCCourseMod;
 import com.onrn.mccourse.item.custom.ChainsawItem;
+import com.onrn.mccourse.item.custom.PaxelItem;
 import java.util.List;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -72,6 +73,12 @@ public class ModItems {
     public static final Item FLUORITE_HOE = registerItem("fluorite_hoe",
             new HoeItem(ModToolMaterials.FLUORITE,
                     new Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 0, -3f))));
+    /**
+     * paxel : pickaxe + shovel + axe
+     */
+    public static final Item FLUORITE_PAXEL = registerItem("fluorite_paxel",
+            new PaxelItem(ModToolMaterials.FLUORITE,
+                    new Settings().attributeModifiers(PaxelItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 4, -2.5f))));
 
     /**
      * Registry에 새로운 아이템을 등록하기 위한 메서드

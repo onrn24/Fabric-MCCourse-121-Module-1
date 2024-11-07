@@ -1,6 +1,8 @@
 package com.onrn.mccourse.datagen;
 
 import com.onrn.mccourse.block.ModBlocks;
+import com.onrn.mccourse.util.ModTags;
+import com.onrn.mccourse.util.ModTags.Blocks;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -41,5 +43,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.FLUORITE_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.FLUORITE_FENCE_GATE);
         getOrCreateTagBuilder(BlockTags.WALLS).add(ModBlocks.FLUORITE_WALL);
+
+        // paxel
+        getOrCreateTagBuilder(Blocks.PAXEL_MINEABLE)
+                .forceAddTag(BlockTags.PICKAXE_MINEABLE)
+                .forceAddTag(BlockTags.AXE_MINEABLE)
+                .forceAddTag(BlockTags.SHOVEL_MINEABLE);
     }
 }

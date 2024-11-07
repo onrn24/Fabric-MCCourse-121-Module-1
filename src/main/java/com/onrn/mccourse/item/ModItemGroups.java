@@ -31,6 +31,8 @@ public class ModItemGroups {
                             entries.add(ModItems.FLUORITE_SHOVEL);
                             entries.add(ModItems.FLUORITE_AXE);
                             entries.add(ModItems.FLUORITE_HOE);
+
+                            entries.add(ModItems.FLUORITE_PAXEL);
                     })
                     .build()
     );
