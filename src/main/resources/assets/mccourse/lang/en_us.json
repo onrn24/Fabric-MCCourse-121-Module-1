@@ -5,6 +5,12 @@
   "item.mccourse.strawberry": "Strawberry",
   "item.mccourse.starlight_ashes": "Starlight Ashes",
 
+  "item.mccourse.fluorite_sword": "Fluorite Sword",
+  "item.mccourse.fluorite_pickaxe": "Fluorite Pickaxe",
+  "item.mccourse.fluorite_shovel": "Fluorite Shovel",
+  "item.mccourse.fluorite_axe": "Fluorite Axe",
+  "item.mccourse.fluorite_hoe": "Fluorite Hoe",
+
   "block.mccourse.fluorite_block": "Fluorite Block",
   "block.mccourse.fluorite_ore": "Fluorite Ore",
   "block.mccourse.fluorite_deepslate_ore": "Fluorite Deepslate Ore",

@@ -75,5 +75,14 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHAINSAW, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
         itemModelGenerator.register(ModItems.STARLIGHT_ASHES, Models.GENERATED);
+
+        // 렌더링 방식을 지정하는 기본 모델 템플릿
+        // - GENERATED : 기본적인 2D 아이템, 주로 블록(아이템화된 돌, 흙)이나 인벤토리에서 단숭하게 표시되는 아이템
+        // - HANDHELD : 손에 들었을 때 사용하는 아이템, 주로 도구(섬, 도끼, 곡괭이, 삽)와 같이 손에 들어서 사용
+        itemModelGenerator.register(ModItems.FLUORITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_HOE, Models.HANDHELD);
     }
 }
