@@ -3,10 +3,13 @@ package com.onrn.mccourse.item;
 import com.onrn.mccourse.MCCourseMod;
 import com.onrn.mccourse.item.custom.ChainsawItem;
 import com.onrn.mccourse.item.custom.HammerItem;
+import com.onrn.mccourse.item.custom.ModEffectSwordItem;
 import com.onrn.mccourse.item.custom.PaxelItem;
 import java.util.List;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
@@ -60,8 +63,9 @@ public class ModItems {
      * custom tools : sword
      */
     public static final Item FLUORITE_SWORD = registerItem("fluorite_sword",
-            new SwordItem(ModToolMaterials.FLUORITE,
-                    new Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 3, -2.4f))));
+            new ModEffectSwordItem(ModToolMaterials.FLUORITE,
+                    new Settings().attributeModifiers(ModEffectSwordItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 3, -2.4f)),
+                    StatusEffects.LEVITATION));
     public static final Item FLUORITE_PICKAXE = registerItem("fluorite_pickaxe",
             new PickaxeItem(ModToolMaterials.FLUORITE,
                     new Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 1, -2.8f))));
