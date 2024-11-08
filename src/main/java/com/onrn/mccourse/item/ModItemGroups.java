@@ -33,6 +33,7 @@ public class ModItemGroups {
                             entries.add(ModItems.FLUORITE_HOE);
 
                             entries.add(ModItems.FLUORITE_PAXEL);
+                            entries.add(ModItems.FLUORITE_HAMMER);
                     })
                     .build()
     );
